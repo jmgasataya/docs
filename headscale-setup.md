@@ -93,7 +93,8 @@ https://tailscale.com/download/
 tailscale up \
   --login-server https://your-host-name.com \
   --authkey <generated_preauth_key> \
-  --reset --accept-routes 
+  --reset --accept-routes \
+  --hostname <custom_device_name>
 ```
 To advertise routes
 ```
@@ -101,14 +102,16 @@ tailscale up \
   --login-server https://your-host-name.com \
   --authkey <generated_preauth_key> \
   --advertise-routes=<network_address> \
-  --reset --accept-routes 
+  --reset --accept-routes \
+  --hostname <custom_device_name>
   
 # example:
 tailscale up \
   --login-server https://headscale.magisinov.com \
   --authkey qwertyuiop123456789 \
   --advertise-routes=192.168.30.0/24,192.168.80.0/24  \
-  --reset --accept-routes 
+  --reset --accept-routes \
+  --hostname glorietta-5-bpo
 ```
 
 
@@ -118,6 +121,9 @@ tailscale up \
 - Beside the Device Routes will be the address advertised
 - Click on the button to Enable Route
 ![Alt Text](https://s11.gifyu.com/images/SgE3L.gif)
+
+**!!** There is a bug in the headscale-UI where the Device Routes duplicate. Just click on all the 'pending's and it will just be ok.
+![Alt text](headscaleUI-bug.png)
 
 ## Solution for overlapping ipv4 addresses
 https://tailscale.com/kb/1201/4via6-subnets/

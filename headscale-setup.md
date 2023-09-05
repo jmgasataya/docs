@@ -89,8 +89,9 @@ docker exec headscale headscale apikeys create
 
 ## Client Setup
 1. Download Tailscale client
-https://tailscale.com/download/
-2. Open command line and execute command
+- **Windows 10 or later**: https://tailscale.com/download/
+- **Windows 7/8**: https://pkgs.tailscale.com/stable/tailscale-setup-1.44.2.exe 
+3. Open command line and execute command
 ```
 tailscale up \
   --login-server https://your-host-name.com \

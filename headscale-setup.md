@@ -65,6 +65,8 @@ your-host-name.com {
 ## Generate API key
 this will be used to access data on Headscale UI
 ```
+# connect to the ec2 instance in AWS (HIK Central)
+# execute this command
 docker exec headscale headscale apikeys create
 ```
 - Navigate to https://your-host-name.com/web/settings.html
